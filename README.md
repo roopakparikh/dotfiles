@@ -1,4 +1,4 @@
 dotfile
 =======
 
-My Dot Files
+A collection of my dot files
