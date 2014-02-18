@@ -1,0 +1,20 @@
+term screen-256color
+ 
+# allow bold colors
+attrcolor b ".I"
+  
+# tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm*|putty*|screen* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+  
+# tell screen how to change xterm window titles
+termcapinfo xterm*|putty*|screen* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+   
+# erase background with current bg color
+defbce "off"
+    
+# use alternate terminal screen
+altscreen on
+   
+# configure hard status line
+hardstatus alwayslastline
+hardstatus string '%{= kd} %-w%{+r}%n %t%{-}%+w %=%d/%m %{w}%0c%{-} '
