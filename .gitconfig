@@ -1,0 +1,12 @@
+[user]
+	name = Roopak Parikh
+	email = rparikh@platform9.net
+[merge]
+	tool = p4mergetool
+[mergetool "p4mergetool"]
+	trustExitCode = false
+	cmd = /opt/p4v/bin/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[diff]
+	tool = p4mergetool
+[difftool "p4mergetool"]
+	cmd = /opt/p4v/bin/p4merge $LOCAL $REMOTE
