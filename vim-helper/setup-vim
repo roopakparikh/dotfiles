@@ -5,31 +5,5 @@
 mv  ~/.vim ~/.vim.bk
 mv  ~/.vimrc ~/.vimrc.bk
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle
-mkdir -p ~/.vim/colors
-
-ln -s  ~/dotfiles/.vimrc ~/.vimrc
-
-# Create the vim colors directory and  get the wombat256
-mkdir -p ~/.vim/colors && cd ~/.vim/colors
-wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
-
-# Now set up the bundle and autoload
-curl -so ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
-# Now you can install any plugin into a .vim/bundle/plugin-name/ folder
-
-# Get powerline
-cd ~/.vim/bundle
-git clone git://github.com/Lokaltog/vim-powerline.git
-
-# Ctrl P
-cd ~/.vim/bundle
-git clone https://github.com/kien/ctrlp.vim.git
-
-# Jedi-Vim
-cd ~/.vim/bundle
-git clone git://github.com/davidhalter/jedi-vim.git
-
-# Python folding
-mkdir -p ~/.vim/ftplugin
-wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
+ln -s  ~/dotfiles/vim-helper/.vimrc ~/.vimrc
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
