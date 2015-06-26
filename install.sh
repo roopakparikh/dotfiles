@@ -18,6 +18,8 @@ $PKG_MGR -y install tmux
 $PKG_MGR -y install mosh
 $PKG_MGR -y install gdb
 $PKG_MGR -y install fish
+chsh -s /usr/bin/fish
+mosh-server
 
 ./vim-helper/setup-vim
 
