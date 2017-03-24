@@ -13,6 +13,14 @@ $PKG_MGR -y install mosh
 $PKG_MGR -y install gdb
 $PKG_MGR -y install fish
 $PKG_MGR -y install vim
+$PKG_MGR -y install python-pip python-devel
+$PKG_MGR -y groupinstall 'Development Tools'
+$PKG_MGR -y install yum-utils
+yum-config-manager --add-repo \
+                    https://download.docker.com/linux/centos/docker-ce.repo
+yum makecache fast
+yum install docker
+pip install aws-cli
 chsh -s /usr/bin/fish
 mosh-server
 
